@@ -27,6 +27,9 @@
 #     assert stack.top.data == 'data1'
 #     stack.pop()
 #     assert stack.top == None
+#     stack.pop()
+#     assert stack.top == None
+
 
 import unittest
 
@@ -57,6 +60,8 @@ class TestStack(unittest.TestCase):
         self.assertEquals(stack.top.data, 'data2')
         stack.pop()
         self.assertEquals(stack.top.data, 'data1')
+        stack.pop()
+        self.assertEquals(stack.top, None)
         stack.pop()
         self.assertEquals(stack.top, None)
 
